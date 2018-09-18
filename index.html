@@ -3,7 +3,6 @@
   <head>
     <title>EF Education First | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" async defer></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" async defer>
     <style>
         .mainWrapper .bannerWrapper{position:relative;height:80vh}.mainWrapper .bannerWrapper .logo{position:absolute;left:10%;top:30px;width:10%}.mainWrapper .bannerWrapper .bannerText{position:absolute;left:20%;width:50%;top:30%;font-size:50px;line-height:60px;font-weight:700;color:#FFF;margin:0}.mainWrapper .bannerWrapper p{display:none;font-size:14px;font-weight:600;color:#FFF;position:absolute;left:15px;right:15px;top:40%}.mainWrapper .bannerWrapper #webinarPopUp{left:20%;top:60%;border-radius:60px;line-height:60px;border:1px solid #00a2e6;background-color:#00a2e6;padding-left:60px;padding-right:30px;font-size:20px;color:#FFF;position:relative;overflow:hidden;outline:0;cursor:pointer;transition:.2s}.mainWrapper .bannerWrapper #webinarPopUp::before{content:'';background-image:url(/sitetest/assets/CTA_Icon.svg);position:absolute;left:0;top:0;width:60px;height:60px;background-position:center;background-repeat:no-repeat}.mainWrapper .bannerWrapper #webinarPopUp:hover{background-color:transparent;border-color:#FFF;transition:.2s}.mainWrapper .bannerWrapper #scrollTo{position:absolute;right:15px;bottom:-40px;width:80px;height:80px;border-radius:50%;border:none;background-color:#00a2e6;outline:0}.mainWrapper .bannerWrapper #scrollTo::before{content:'\f078';font-family:fontawesome;position:absolute;left:0;top:0;width:100%;line-height:80px;font-size:30px;font-weight:400;color:#FFF;cursor:pointer}.mainWrapper .bannerWrapper #scrollTo:hover{background-color:#333;transition:.2s}
@@ -177,7 +176,20 @@
         <button id="scroll">&nbsp;</button>
       </div>
     </div>
-    <link rel="stylesheet" type="text/css" href="style.min.css" async defer>
+    <script>
+        var cb = function() {
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.href = 'style.min.css';
+            var h = document.getElementsByTagName('head')[0];
+            h.parentNode.insertBefore(l.h);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame; 
+        if (raf) raf(cb);
+        else window.addEventListener('load', cb);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" async defer></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.min.css" async defer> -->
     <script src="/sitetest/assets/parallax.js" async defer></script>
     <script src="/sitetest/assets/owl.carousel.min.js" async defer></script>
     <script src="/sitetest/assets/sitescript.js" async defer></script>
