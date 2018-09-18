@@ -13,12 +13,9 @@ body {
     font-weight: bold;
     font-size: 2em;
 }
-/* .mainContainer {
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    flex-wrap: wrap;
-} */
+.mainContainer {
+    background-color: #d3d3d3;
+}
 .innerSection {
     /* flex: 1 0 50%; */
     float: left;
