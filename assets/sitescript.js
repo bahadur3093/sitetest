@@ -14,10 +14,10 @@ $(document).ready(function() {
   });
 
   $('.bannerWrapper').parallax({
-    imageSrc: '../assets/image-1.jpg'
+    imageSrc: '/sitetest/assets/image-1.jpg'
   });
   $('.contactSec').parallax({
-    imageSrc: '../assets/image-2.jpg'
+    imageSrc: '/sitetest/assets/image-2.jpg'
   });
   $('#scroll').on('click', function() {
     $('html,body').animate({
