@@ -183,7 +183,7 @@
             l.rel = 'stylesheet';
             l.href = 'style.min.css';
             var h = document.getElementsByTagName('head')[0];
-            h.parentNode.insertAfter(l,h);
+            h.parentNode.insertBefore(l,h);
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame; 
         if (raf) raf(cb);
