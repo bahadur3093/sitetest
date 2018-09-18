@@ -2,5 +2,6 @@
     .innerSection {
         width: 100%;
         height: auto !important;
+        margin-bottom: 30px;
     }
 }
