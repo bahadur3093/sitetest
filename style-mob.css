@@ -1,5 +1,6 @@
 @media (max-width: 640px) {
     .innerSection {
         width: 100%;
+        height: auto !important;
     }
 }
